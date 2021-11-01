@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylee.css">
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1>Chaitali</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#first" data-after="Home">Home</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About me</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- first Section  -->
+  <section id="first">
+    <div class="first container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>My Name is <span></span></h1>
+        <h1>Chaitali <span></span></h1>
+        <a href="#projects" type="button" class="cta">Portfolio</a>
+      </div>
+    </div>
+  </section>
+  <!-- End first Section  -->
+
+  
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 1</h1>
+            <h2>Automation of feedback system</h2>
+            <p>The Automation Feedback system which is designed for particular need of college in which aims to rate and analyse the faculty performance and it will reduce the strenuous work.Two technologies such as OCR and OMR have been used in this project. </p>
+          </div>
+          <div class="project-img">
+            <img src="omr.PNG" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 2</h1>
+            <h2>Quiz Website</h2>
+            <p>Quiz Website is a simple website created using html and css.It contains login, register, contact us and about us pages.</p>
+          </div>
+          <div class="project-img">
+            <img src="quiz.PNG" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 3</h1>
+            <h2>Login page</h2>
+            <p>Simple login page using various html tags and css property.</p>
+          </div>
+          <div class="project-img">
+            <img src="login.PNG" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 4</h1>
+            <h2>Diwali card</h2>
+            <p>Simple Diwali card page using html tags like border tag and css property</p>
+          </div>
+          <div class="project-img">
+            <img src="diwali.PNG" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Project 5</h1>
+            <h2>National anthem page</h2>
+            <p>National anthem and pledge written in html and css to look attrative.</p>
+          </div>
+          <div class="project-img">
+            <img src="national.PNG" alt="img">
+          </div>
+            
+            
+        </div>
+      </div>
+    </div>
+      <h1 class="section-title">My <span>Projects</span></h1>
+      <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="quiz.PNG" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="login.PNG" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="register.PNG" style="width:100%">
+</div>       
+  
+  <div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="aboutus.PNG" style="width:100%">
+</div>        
+        
+          
+ <div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="diwali.PNG" style="width:100%">
+</div>         
+          
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="national.PNG" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="women.png" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>Web Developer</h2>
+        <p> I am Chaitali Patil from Kalyan,Maharashtra. I have completed my B.E  from Datta Meghe college of Engineering,Airoli, Navi Mumbai in IT department, with an aggregate of 70.30%. My hobbies are dancing,listening music and playing badminton. I am fresher and have no work experience in any company. My strength are that I can adapt quickly to any environment and have good communication and presentation skills.</p>
+        <a href="https://drive.google.com/file/d/1r6IefH4ZZDY85AX6EVNl2M8fb8bVa4JJ/view?usp=sharing" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon"><img src="phone.png" /></div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>7021773367</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="email.png" /></div>
+            
+            
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>chaitalipatil2028@gmail.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><img src="address.png" /></div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Kalyan,Maharashtra</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1>Chaitali</h1>
+      </div>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="https://www.facebook.com/"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+        
+        
+      </div>
+      <p>Copyright © 2021 Chaitali. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+</body>
+
+</html>
